@@ -18,7 +18,7 @@ public class PanicStatusService {
         return (List<StateTBL>) panicStatusRepository.findAll();
     }
 
-//    public StateTBL fetchStatus() {
-//
-//    }
+    public List<StateTBL> fetchStatus() {
+        return (List<StateTBL>) panicStatusRepository.findLast();
+    }
 }

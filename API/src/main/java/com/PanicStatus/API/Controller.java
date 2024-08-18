@@ -26,9 +26,9 @@ class PanicStatusController {
         return panicStatusService.fetchStatuses();
     }
 
-//    @GetMapping("/status")
-//    public @ResponseBody StateTBL currStatus() {
-//        return panicStatusService.fetchStatus();
-//    }
+    @GetMapping("/status")
+    public @ResponseBody List<StateTBL> currStatus() {
+        return panicStatusService.fetchStatus();
+    }
 
 }

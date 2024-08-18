@@ -12,6 +12,10 @@ import org.springframework.data.cassandra.core.mapping.Table;
 
 @Table
 class StateTBL {
+
+//    @PrimaryKey
+    private int device;
+
     @PrimaryKey
     private UUID id;
 
@@ -19,10 +23,15 @@ class StateTBL {
 
     private int change_time;
 
-    StateTBL(UUID id, boolean state, int change_time) {
+    StateTBL(int device, UUID id, boolean state, int change_time) {
+        this.device = device;
         this.id = id;
         this.state = state;
         this.change_time = change_time;
+    }
+
+    public int getDevice() {
+        return device;
     }
 
     public UUID getId() {
