@@ -3,6 +3,7 @@ package com.PanicStatus.API;
 import com.PanicStatus.API.StateTBL;
 import com.PanicStatus.API.PanicStatusRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.cassandra.repository.config.EnableCassandraRepositories;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
